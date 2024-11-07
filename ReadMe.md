@@ -78,6 +78,30 @@ df['Age'].fillna(df['Age'].median(), inplace=True)
 df['Embarked'] = df['Embarked'].astype('category') 
 ```
 
+# Data Cleaning and Imputation
+
+This project involves data cleaning and missing value imputation for two datasets, `train.csv` and `test.csv`. The primary goal is to fill missing values in categorical and numerical columns, making the dataset ready for analysis or model training.
+
+## Files
+
+- `train.csv`: Training dataset containing known outcomes.
+- `test.csv`: Test dataset, which we will clean similarly to the training data for consistency in modeling.
+
+## Data Cleaning Steps
+
+### 1. Checking Missing Values
+
+The initial inspection of both datasets identified missing values in several columns. Here’s a breakdown of the columns with missing data and the percentage of missing values:
+
+```python
+# Calculating the percentage of missing values in each column for both datasets
+train_missing_values = df_train.isnull().mean() * 100
+test_missing_values = df_test.isnull().mean() * 100
+
+# Displaying missing values percentages
+train_missing_values, test_missing_values
+
+
 ## The Analysis
 The project consists of several key analyses, each focusing on specific aspects of the data to uncover insights about passenger behavior and preferences:
 
