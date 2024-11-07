@@ -100,7 +100,7 @@ test_missing_values = df_test.isnull().mean() * 100
 
 # Displaying missing values percentages
 train_missing_values, test_missing_values
-
+```
 
 ## The Analysis
 The project consists of several key analyses, each focusing on specific aspects of the data to uncover insights about passenger behavior and preferences:
